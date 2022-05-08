@@ -1,0 +1,56 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/nav_graph"
+    app:startDestination="@id/FirstFragment">
+
+    <fragment
+        android:id="@+id/FirstFragment"
+        android:name="com.example.practica1.FirstFragment"
+        android:label="@string/first_fragment_label"
+        tools:layout="@layout/fragment_first">
+
+        <action
+            android:id="@+id/action_FirstFragment_to_SecondFragment"
+            app:destination="@id/SecondFragment" />
+        <action
+            android:id="@+id/action_FirstFragment_to_practica1LinearFragment2"
+            app:destination="@id/practica1LinearFragment2" />
+        <action
+            android:id="@+id/action_FirstFragment_to_practica1ConstraintFragment"
+            app:destination="@id/practica1ConstraintFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/SecondFragment"
+        android:name="com.example.practica1.SecondFragment"
+        android:label="@string/second_fragment_label"
+        tools:layout="@layout/fragment_second">
+
+        <action
+            android:id="@+id/action_SecondFragment_to_FirstFragment"
+            app:destination="@id/FirstFragment" />
+        <action
+            android:id="@+id/action_SecondFragment_to_linearLayoutFragment"
+            app:destination="@id/linearLayoutFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/practica1LinearFragment2"
+        android:name="com.example.practica1.Practica1LinearFragment"
+        android:label="fragment_practica1_linear"
+        tools:layout="@layout/fragment_practica1_linear" />
+    <fragment
+        android:id="@+id/practica1ConstraintFragment"
+        android:name="com.example.practica1.Practica1ConstraintFragment"
+        android:label="fragment_practica1_constraint"
+        tools:layout="@layout/fragment_practica1_constraint" />
+    <fragment
+        android:id="@+id/linearLayoutFragment"
+        android:name="com.example.practica1.LinearLayoutFragment"
+        android:label="fragment_linear_layout"
+        tools:layout="@layout/fragment_linear_layout" >
+        <action
+            android:id="@+id/action_linearLayoutFragment_to_SecondFragment"
+            app:destination="@id/SecondFragment" />
+    </fragment>
+</navigation>
